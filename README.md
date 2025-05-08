@@ -1,77 +1,57 @@
-# Macro-Impact-EURUSD-Quantitative-Analysis
-A comprehensive macroeconomic and technical analysis toolkit for the EUR/USD currency pair — featuring volatility modeling, Sharpe/Sortino ratios, Monte Carlo simulations, and multi-asset backtesting using Python.
-EUR-USD-Macro-Analysis
-A quantitative macroeconomic analytics project analyzing the EUR/USD exchange rate through the lens of U.S. macro indicators such as Treasury yields, interest rates, inflation, and the USD Index.
 
-📈 EUR/USD Macro Analysis Toolkit
-🚀 Description
-This project investigates the behavior of the EUR/USD currency pair in relation to major U.S. macroeconomic variables, including:
+🚀 Project Overview
+This project explores the quantitative relationship between macroeconomic indicators and the EUR/USD exchange rate. We apply data wrangling, technical analysis, macro correlation, and machine learning models to forecast daily FX direction. SHAP values provide transparency into the model’s decision-making.
 
-10-Year Treasury Yield
+✅ What This Project Demonstrates
+End-to-end FX and macro modeling workflow
+Quantitative macro impact analysis on FX trends
+Hands-on use of technical indicators and time-series features
+Machine learning (Random Forest, Decision Tree) for classification
+Model interpretability using SHAP
+Fully built in Python using only free and open data
 
-Effective Federal Funds Rate (FFR)
+🧱 Key Modules & Steps
+1. 📥 Data Collection
+FX Rate: EUR/USD via yfinance
+Macro Indicators from FRED:
+US 10-Year Treasury Yield (DGS10)
+Federal Funds Rate (FEDFUNDS)
+US Inflation CPI (CPIAUCSL)
+US Dollar Index (DTWEXBGS)
+Fallback to EUR/USD only if FRED not working
 
-Consumer Price Index (CPI)
+2. 🧹 Data Wrangling
+Date alignment, missing value handling
+Percentage changes for macro indicators
+Return calculations and lag creation
 
-U.S. Dollar Index (DXY)
+3. 📊 Exploratory Analytics
+Line charts for FX + macro trends
+Rolling correlation (EUR/USD vs CPI, DXY, etc.)
+Rolling volatility using standard deviation
+Visual overlays of macro vs FX behavior
 
-The objective is to uncover patterns, correlations, and potential leading indicators that affect currency performance, risk, and volatility. This analysis helps understand macro-driven FX dynamics for traders, analysts, and economists.
+4. 📈 Strategy Backtest
+Simple SMA crossover (50 vs 200)
+Returns & strategy equity curve
+Sharpe ratio and drawdown comparison with Buy & Hold
 
-The project covers:
+5. 🤖 Machine Learning Models
+Train Decision Tree & Random Forest to classify direction
+Use lagged returns, RSI, MACD, SMA_diff, etc. as features
+Evaluate with confusion matrix, accuracy, precision/recall
 
-Time-series alignment and preprocessing of daily financial and macroeconomic data (2006–2025)
+6. 🔍 Explainability with SHAP
+SHAP summary plots to interpret model behavior
+Identify most influential features (e.g. RSI, MACD)
+Explore which factors drove predictions up/down
 
-Visualization of macro trends alongside EUR/USD behavior
-
-Calculation of rolling volatility, log returns, drawdowns, and Sharpe ratios
-
-Correlation analysis between macroeconomic variables and EUR/USD returns
-
-Preparation for integration into more advanced forecasting or trading strategies
-
-📊 Technologies Used
-Python (Data analysis and visualization)
-
-Pandas and NumPy (Data manipulation)
-
-yFinance, FRED API (Data sourcing)
-
-Matplotlib and Seaborn (Plotting and visualizations)
-
-SciPy (Statistical analysis)
-
-Jupyter Notebook (Interactive development environment)
-
-📁 Project Structure
-bash
-Copy
-Edit
-EUR-USD-Macro-Analysis/
-│
-├── data/                  # Raw and processed datasets (csv files)
-├── notebooks/             # Main analysis notebook(s)
-├── plots/                 # Saved charts and visualizations
-├── utils/                 # Helper functions (if applicable)
-├── README.md              # Project overview and documentation
-✅ Features
-Robust preprocessing of financial and macroeconomic time-series data
-
-Return and volatility analysis on EUR/USD using log returns
-
-Macro variable correlation tracking
-
-Rolling risk metrics (volatility, drawdown, Sharpe ratio)
-
-Comparative macro-visualizations for FX modeling context
-
-📌 Use Cases
-FX macro research and strategy development
-
-Backtesting macro factor impact on currencies
-
-Educational purposes in macro-finance modeling
-
-Institutional research for policy and interest rate forecasting
+📊 Visualizations Used
+EUR/USD time-series trend
+Macro + FX overlays
+Rolling correlation heatmap
+Volatility charts
+Model accuracy and SHAP feature bars
 
 📃 License
 This project is released under the MIT License.
