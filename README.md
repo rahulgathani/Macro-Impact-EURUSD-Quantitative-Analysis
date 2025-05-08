@@ -1,3 +1,4 @@
+🧠 Project Title: Macro Impact FX Prediction EUR/USD with ML and SHAP
 
 🚀 Project Overview:
 This project explores the quantitative relationship between macroeconomic indicators and the EUR/USD exchange rate. We apply data wrangling, technical analysis, macro correlation, and machine learning models to forecast daily FX direction. SHAP values provide transparency into the model’s decision-making.
